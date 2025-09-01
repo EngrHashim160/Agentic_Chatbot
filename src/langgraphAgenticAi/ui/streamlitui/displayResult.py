@@ -15,7 +15,8 @@ class DisplayResultStreamlit:
         if usecase == "Basic Chatbot":
             for event in graph.stream({'messages': ('user', user_message)}):
                 print(event.values())
-                with st.chat_message('user'):
-                    st.write(user_message)
-                with st.chat_message('assistant'):
-                    st.write(value['messages'].content)
+                for value in event.values():
+                    with st.chat_message('user'):
+                        st.write(user_message)
+                    with st.chat_message('assistant'):
+                        st.write(value['messages'].content)
