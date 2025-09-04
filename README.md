@@ -109,4 +109,4 @@ streamlit run Agentic_chatbot/app.py
 ---
 
 ## 📄 License
-MIT (or your preferred). Update this section if you’re using a different license.
+MIT
